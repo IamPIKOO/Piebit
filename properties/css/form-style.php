@@ -44,8 +44,6 @@
 
     body {
         background: var(--body-color-grey);
-        background: repeating-linear-gradient(-45deg, 
-        #fff 0px, #fff 10px, var(--body-color-grey) 10px, var(--body-color-grey) 20px);
     }
 
     body.dark {
@@ -205,13 +203,13 @@
         font-size: 1.2rem;
     }
 
-    .svgForForm {
+    /* .svgForForm {
         height: 100%;
         width: 100%;
         background: red;
         position: absolute;
         background-image: linear-gradient(90deg, #f7fcf0, #e5f5df, #d4eece, #bde5bf, #9fd9bb, #7bcbc4, #58b7cd, #399cc6, #1e7eb7, #0b60a1, #0b60a1);
-    }
+    } */
 
 
     /* ========================================================== SIGNUP STARTS ============*/
