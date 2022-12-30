@@ -937,11 +937,22 @@
         }
 
         #navigationBar #sideMenu {
-            top: 2.55rem;
+            top: 2.5rem;
+            box-shadow: none;
+            border-right: 1px solid var(--non-color-dark);
+        }
+
+        #sideMenu i {
+            font-size: 18px;
         }
 
         #sideMenu a {
-            font-size: 18px;
+            font-size: 17px;
+        }
+
+        #sideMenu  .icon-right {
+            font-size: 15px;
+            margin-left: 1rem;
         }
 
         .darkLight i {
