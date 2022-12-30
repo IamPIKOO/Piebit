@@ -232,17 +232,7 @@
         top: 0;
         left: 50%;
         transform: translateX(-50%);
-        /* border-left: 5px solid var(--secondary-color-blue);
-        border-right: 5px solid var(--secondary-color-blue); */
     }
-
-    /* #navigationBar .divider {
-        width: 1px;
-        background: var(--text1-color-dark-grey);
-        height: 30px;
-        display: block;
-        margin: 0;
-    } */
 
     #navigationBar #menuController {
         position: relative;
@@ -266,6 +256,7 @@
         transform: translateY(-8px);
         transition: var(--tran-04);
         background: var(--text1-color-dark-grey);
+        border-radius: 15px;
     }
 
     #navigationBar #menuController::after {
@@ -276,6 +267,7 @@
         background: var(--text1-color-dark-grey);
         box-shadow: 0 8px 0 0 var(--text1-color-dark-grey);
         transition: var(--tran-04);
+        border-radius: 15px;
     }
 
     #navigationBar .brandLogo {
@@ -922,6 +914,59 @@
             background: var(--secondary-color-blue);
             color: var(--bar-color-light);
             transform: scale(1.0);
+        }
+
+    }
+
+    @media only screen and (max-width: 600px) {
+
+        #navigationBar { 
+            height: 40px;
+        }
+
+        #navigationBar #menuController {
+            width: 35px;
+            height: 35px;
+        }
+
+        #navigationBar #menuController::before {
+            width: 20px;
+        }
+
+        #navigationBar #menuController::after {
+            width: 20px;
+        }
+
+        #navigationBar #sideMenu {
+            top: 2.5rem;
+        }
+
+        .darkLight i {
+            font-size: 17px;
+        }
+
+        .searchToggle i {
+            font-size: 17px;
+        }
+
+        .profileContents img {
+            width: 30px;
+            height: 30px;
+        }
+
+        .downButtonBar {
+            padding: 0.2rem 0.2rem;
+        }
+
+        .downButtonBar a {
+            font-size: 22px;
+            padding: 2px 8px;
+        }
+
+        .downButtonBar a:hover {
+            background: var(--bar-color-light);
+            color: var(--secondary-color-blue);
+            transform: scale(0.9);
         }
 
     }
@@ -1913,18 +1958,15 @@
         }
     }
 
-    @media only screen and (max-width: 510px) {
+    @media only screen and (max-width: 600px) {
         .postContainer {
-            min-width: 100%;
+            max-width: 100%;
             width: 100%;
+            padding: 2.7rem 0px 4rem 0px;
         }
     }
 
     @media only screen and (max-width: 415px) {
-        .postContainer {
-            background: red;
-        }
-
         .postContainer .wrapper {
             width: 100%;
         }
