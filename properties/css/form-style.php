@@ -705,12 +705,11 @@
 
 
     @media only screen and (max-width: 1050px) {
-
         #navigationBar #sideMenu {
             background: var(--bar-color-light);
             position: fixed;
             left: 0;
-            top: 3.5rem;
+            top: 3.48rem;
             gap: 0;
             display: block;
             width: 110px;
@@ -718,7 +717,7 @@
             overflow-y: auto;
             scrollbar-width: none;
             transition: var(--tran-06);
-            z-index: 100;
+            z-index: 200;
             box-shadow: var(--box-shadow);
             pointer-events: auto;
             padding: 0.4rem 0.4rem 10rem 0.4rem;
@@ -938,7 +937,11 @@
         }
 
         #navigationBar #sideMenu {
-            top: 2.5rem;
+            top: 2.55rem;
+        }
+
+        #sideMenu a {
+            font-size: 18px;
         }
 
         .darkLight i {
