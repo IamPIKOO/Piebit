@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <?php require ('../css/form-style.php'); ?>
+    <?php require ('../css/other-style.php'); ?>
     <title></title>
 </head>
 <body>
@@ -25,19 +25,11 @@
             <li class="menuItem"><a href="#"><i class="bi bi-grid"></i> Dashboard </a></li>
 
             <li class="menuItem">
-                <a class="iconOptionDropD" href="#"><i class="bi bi-bullseye icon5 iconOptionDropdown"></i> Escrow <i class="bi bi-chevron-right icon-right"></i></a>
-                <ul class="sideMenudropdown">
-                    <li><a href="buyer.com">Buyer</a></li>
-                    <li><a href="#">Seller</a></li>
-                </ul>
+                <a href="#"><i class="bi bi-bullseye icon5"></i> Escrow </a>
             </li>
 
             <li class="menuItem">
-                <a class="iconOptionDropD" href="#"><i class="bi bi-card-text icon5 iconOptionDropdown"></i> Appeal <i class="bi bi-chevron-right icon-right"></i></a>
-                <ul class="sideMenudropdown">
-                    <li><a href="#">Buyer</a></li>
-                    <li><a href="#">Seller</a></li>
-                </ul>
+                <a href="#"><i class="bi bi-card-text icon5"></i> Appeal </a>
             </li>
 
             <li class="menuItem"><a href="supports.php"><i class="bi bi-file-text"></i> Supports </a></li>  
@@ -175,7 +167,7 @@
 
 <script>
 
-//MENU OPEN AND CLOSE 
+// MENU OPEN AND CLOSE 
 const menuController = document.getElementById('menuController'),
       sideMenu = document.getElementById('sideMenu');
 
@@ -191,6 +183,7 @@ document.onclick = function(clickEvent) {
         sideMenu.classList.remove('active');
     }
 }
+
 
 </script>
 

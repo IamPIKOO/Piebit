@@ -638,17 +638,17 @@
     .downButtonBar {
         background: var(--bar-color-light);
         position: fixed;
-        right: 1.3rem;
+        right: 0.5rem;
         bottom: 0.3rem;
         display: flex;
         padding: 0.4rem 0.2rem;
-        width: 295px;
+        width: 280px;
         align-items: center;
         transition: var(--tran-06);
         z-index: 200;
         box-shadow: var(--box-shadow);
         pointer-events: auto;
-        justify-content: space-evenly;
+        justify-content: center;
         border-radius: 10px;
     }
 
@@ -661,7 +661,7 @@
         background: var(--bar-color-light);
         transition: all 0.3s ease-in-out;
         white-space: nowrap;
-        padding: 6px 8px;
+        padding: 6px;
         border-radius: 10px;
         width: 50px;
     }
@@ -708,27 +708,24 @@
         #navigationBar #sideMenu {
             background: var(--bar-color-light);
             position: fixed;
-            left: 0;
-            top: 3.48rem;
+            left: -1000%;
             gap: 0;
             display: block;
-            width: 110px;
+            width: 0;
             height: 100vh;
             overflow-y: auto;
             scrollbar-width: none;
             transition: var(--tran-06);
             z-index: 200;
-            box-shadow: var(--box-shadow);
-            pointer-events: auto;
+            pointer-events: none;
             padding: 0.4rem 0.4rem 10rem 0.4rem;
+            top: 3.5rem;
+            box-shadow: none;
+            border-right: 1px solid var(--non-color-dark);
         }
 
         #navigationBar #sideMenu::-webkit-scrollbar {
             display: none;
-        }
-
-        #navigationBar #sideMenu:hover {
-            width: 300px;
         }
 
         #navigationBar #sideMenu.active {
@@ -751,10 +748,10 @@
         }
 
         #sideMenu a {
-            margin: 5px 0;
-            padding: 10px 1rem;
-            font-size: 23px;
-            background: var(--body-color-grey);
+            font-size: 17px;
+            margin: 5px 0rem;
+            padding: 10px 1.5rem;
+            background: var(--body-color-light);
             color: var(--text1-color-dark-grey);
             display: flex;
             gap: 0;
@@ -847,77 +844,16 @@
             display: none;
         }
 
-
-    }
-
-    @media only screen and (max-width: 840px) {
-
-        #navigationBar #sideMenu {
-            width: 0;
-            left: -1000%;
-            pointer-events: none;
-        }
-
-        #navigationBar #sideMenu.active {
-            left: 0;
-            width: 280px;
-            pointer-events: auto;
-        }
-
-        #sideMenu i {
-            font-size: 25px;
-            margin: 0 0.9rem;
-        }
-
-        #sideMenu  .icon-right {
-            font-size: 18px;
-            margin-top: 2px;
-            margin-left: 1.5rem;
-        }
-
-        #sideMenu a {
-            margin: 5px 0rem;
-            padding: 10px 1.5rem;
-            font-size: 23px;
-            background: var(--body-color-light);
-            color: var(--text1-color-dark-grey);
-        }
-
-        #navigationBar .darkLightSearchBox {
-            width: 30%;
-        }
-
         .downButtonBar {
-            width: 100%;
-            padding: 0.3rem 0.2rem;
-            right: unset;
-            border-radius: 20px 20px 0 0;
-            bottom: 0;
+            display: grid;
+            width: 55px;
         }
 
-        .downButtonBar a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 25px;
-            color: var(--text1-color-dark-grey);
-            background: var(--bar-color-light);
-            transition: all 0.3s ease-in-out;
-            white-space: nowrap;
-            padding: 6px 8px;
-            border-radius: 10px;
-            width: 50px;
-        }
-
-        .downButtonBar a:hover {
-            background: var(--secondary-color-blue);
-            color: var(--bar-color-light);
-            transform: scale(1.0);
-        }
 
     }
 
-    @media only screen and (max-width: 600px) {
+
+    @media only screen and (max-width: 850px) {
 
         #navigationBar { 
             height: 40px;
@@ -937,22 +873,37 @@
         }
 
         #navigationBar #sideMenu {
+            width: 0;
+            left: -1000%;
+            pointer-events: none;
             top: 2.5rem;
             box-shadow: none;
             border-right: 1px solid var(--non-color-dark);
         }
 
+        #navigationBar #sideMenu.active {
+            left: 0;
+            width: 280px;
+            pointer-events: auto;
+        }
+
         #sideMenu i {
             font-size: 18px;
+            margin: 0 0.9rem;
         }
 
         #sideMenu a {
             font-size: 17px;
+            margin: 5px 0rem;
+            padding: 10px 1.5rem;
+            background: var(--body-color-light);
+            color: var(--text1-color-dark-grey);
         }
 
         #sideMenu  .icon-right {
             font-size: 15px;
             margin-left: 1rem;
+            margin-top: 2px;
         }
 
         .darkLight i {
@@ -968,13 +919,32 @@
             height: 30px;
         }
 
+        #navigationBar .darkLightSearchBox {
+            width: 30%;
+        }
+
         .downButtonBar {
+            width: 100%;
             padding: 0.2rem 0.2rem;
+            right: unset;
+            border-radius: 20px 20px 0 0;
+            bottom: 0;
+            display: flex;
+            justify-content: space-evenly;
         }
 
         .downButtonBar a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text1-color-dark-grey);
+            background: var(--bar-color-light);
+            transition: all 0.3s ease-in-out;
+            white-space: nowrap;
             font-size: 22px;
             padding: 2px 8px;
+            border-radius: 10px;
+            width: 50px;
         }
 
         .downButtonBar a:hover {
@@ -1010,14 +980,196 @@
 
 
  /* ========================================================== OPEN MASSAGE CHAT STARTS ============*/
-    .openChatContainer {
-        position: absolute;
+
+     .aboutChatBox {
+        background: var(--body-color-grey);
+        display: flex;
+        position: relative;
+        justify-content: center;
+        align-items: start;
+        height: 100vh;
+        width: 100%;
+        gap: 2rem;
+        padding: 4rem 0 2rem 0;
+     }
+
+     .messageContainer {
+        height: 585px;
+        padding-bottom: 2rem;
+        background: var(--body-color-grey);
+        box-shadow: var(--box-shadow);
+     }
+
+    .messageContainer .postChatHead {
+        background: white;
+        display: flex;
+        top: 0;
+        padding: 0.2rem 0.5rem;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        background: #e7feff;
+        border: 2px solid var(--bar-color-light);
+    }
+
+    .postChatHead img {
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        border: 1px solid var(--non-color-dark);
+        margin: 0 0.1rem;
+        cursor: pointer;
+    }
+
+    .postChatHead .pCHSearchBox {
+        display: flex;
+        padding: 0.3rem 0.3rem 0.3rem 0.4rem;
+        align-items: center;
+        background: var(--body-color-grey);
+        border-radius: 15px;
+        width: 80%;
+        justify-content: space-around;
+        border: 1px solid var(--bar-color-light);
+    }
+
+    .pCHSearchBox input {
+        border-radius: 5px 0 0 5px;
+        background: var(--body-color-grey);
+        color: var(--text1-color-dark-grey);
+        padding: 0 0.4rem;
+        font-size: 19px;
+        width: 100%;
+    }
+
+    .pCHSearchBox input::placeholder {
+        color: var(--secondary-color-blue);
+    }
+
+    .pCHSearchBox i {
+        color: var(--secondary-color-blue);
+        font-size: 17px;
+        background: var(--bar-color-light);
+        padding: 0.2rem;
+        margin: 0.2rem;
+        border-radius: 50%;
+    } 
+
+    .pCHSearchBox i:hover {
+        color: var(--bar-color-light);
+        background: var(--secondary-color-blue);
+    } 
+
+    .messageContainer .postChatBody {
+        padding: 0.4rem;
+        overflow: hidden;
+        overflow-y: auto;
+        scrollbar-width: none;
+        transition: all 0.6s ease;
+        pointer-events: auto;
         display: block;
-        width: 600px;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        border-radius: 12px;
+        gap: 0.4rem;
+        height: 505px;
+        transition: var(--tran-06);
+        background: var(--bar-color-light);
+        border-top: 1px solid var(--non-color-dark);
+        border-bottom: 1px solid var(--non-color-dark);
+    }
+
+    .messageContainer .postChatBody::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    .messageContainer .postChatBody::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+
+    .messageContainer .postChatBody::-webkit-scrollbar-thumb {
+        background: var(--primary-color-light-blue);
+        border-radius: 15px;
+    }
+
+    .messageContainer .postChatBody::-webkit-scrollbar-thumb:hover {
+        background: #bcd4e6;
+    }
+
+    .postChatBody .postCBContainer {
+        display: flex;
+        align-items: center;
+        border-radius: 25px;
+        transition: var(--tran-03);
+        cursor: pointer;
+        padding: 0.3rem 0;
+        margin: 0.3rem 0;
+    }
+
+    .postChatBody .postCBContainer:hover {
+        background: var(--primary-color-light-blue);
+        color: var(--bar-color-light);
+    }
+
+    .postCBContainer .imgCont {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 0.5rem;
+        border-radius: 50%;
+    }
+
+    .imgCont img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+    }
+
+    .imgCont .onlineIcon {
+        position: absolute;
+        height: 15px;
+	    width: 15px;
+        background: var(--secondary-color-blue);
+        border-radius: 50%;
+        bottom: -0.1rem;
+        right: 0;
+        border: 1px solid var(--bar-color-light);
+    }
+
+    .imgCont .offlineIcon {
+        background: #c23616;
+        position: absolute;
+        height: 15px;
+	    width: 15px;
+        border-radius: 50%;
+        bottom: -0.1rem;
+        right: 0;
+        border: 1px solid var(--bar-color-light);
+    }
+
+    .postCBContainer .userInfo {
+        display: block;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        text-align: start;
+    }
+
+    .userInfo span {
+        font-size: 15px;
+        font-weight: 400;
+    }
+
+    .userInfo p {
+        font-size: 12px;
+        line-height: 15px;
+    }
+
+
+
+    .openChatContainer {
+        width: 700px;
+        height: 585px;
+        background: yellow;
+        position: relative;
+        display: block;
         box-shadow: var(--box-shadow);
     }
 
@@ -1027,7 +1179,6 @@
         justify-content: space-between;
         align-items: center;
         background: var(--primary-color-light-blue);
-        border-radius: 12px 12px 0 0;
         width: 100%;
     }
 
@@ -1117,7 +1268,8 @@
         transition: var(--tran-06);
         top: 0;
         cursor: pointer;
-        height: 450px;
+        height: 415px;
+        min-height: 10%;
         border-top: 1px solid var(--non-color-dark);
         border-bottom: 1px solid var(--non-color-dark);
     }
@@ -1227,7 +1379,6 @@
         background: var(--primary-color-light-blue);
         align-items: center;
         justify-content: space-evenly;
-        border-radius: 0 0 10px 10px;
         padding: 0.5rem 0;
     }
 
@@ -1299,23 +1450,16 @@
         position: relative;
         align-items: center;
     }
-
     
     @media only screen and (max-width: 1050px) {
         .openChatContainer {
-            width: 75%;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
+            margin: 3rem 0  3rem 0;
         }
 
-        .openChatContainer .openChatBody {
-            height: 480px;
-        }
     }
 
     @media only screen and (max-width: 600px) {
-        .openChatContainer {
+        /* .openChatContainer {
             width: 97%;
             left: 50%;
             top: 50%;
@@ -1326,11 +1470,11 @@
         .openChatContainer .openChatBody {
             height: 80vh;
      
-        }
+        } */
     }
 
     @media only screen and (max-width: 400px) {
-        .openChatHead .imgContuserInfo {
+        /* .openChatHead .imgContuserInfo {
             gap: 0.7rem;
             padding: 0.5rem 0rem;
         }
@@ -1373,7 +1517,7 @@
 
         .chatWriteUp2B p {
             padding-left: 0.4rem;
-        }
+        } */
 
     }
 
@@ -1528,204 +1672,29 @@
         gap: 0.5rem;
     }
 
-    .rightContentPlus {
-        height: 650px;
-        width: 300px;
-        transition: var(--tran-06);
-        pointer-events: auto;
-        padding: 4rem 2px 2rem 2px;
-        display: flex; 
-        justify-content: flex-end;  
-        align-items: start;
-        position: relative;
-    } 
-
-    .rightContentPlus .messageContainer {
-        width: 295px;
-        height: 400px;
-        position: fixed;
-        background: #e7feff;
-        box-shadow: var(--box-shadow);
-        display: block;
-    }
-
-    .messageContainer .postChatHead {
-        background: white;
-        display: flex;
-        top: 0;
-        padding: 0.2rem 0.5rem;
-        justify-content: space-between;
-        align-items: center;
-        position: relative;
-        background: #e7feff;
-        border: 2px solid var(--bar-color-light);
-    }
-
-    .postChatHead img {
-        height: 50px;
-        width: 50px;
-        border-radius: 50%;
-        border: 1px solid var(--non-color-dark);
-        margin: 0 0.1rem;
-        cursor: pointer;
-    }
-
-    .postChatHead .pCHSearchBox {
-        display: flex;
-        padding: 0.3rem 0.3rem 0.3rem 0.4rem;
-        align-items: center;
-        background: var(--body-color-grey);
-        border-radius: 15px;
-        width: 80%;
-        justify-content: space-around;
-        border: 1px solid var(--bar-color-light);
-    }
-
-    .pCHSearchBox input {
-        border-radius: 5px 0 0 5px;
-        background: var(--body-color-grey);
-        color: var(--text1-color-dark-grey);
-        padding: 0 0.4rem;
-        font-size: 19px;
-        width: 100%;
-    }
-
-    .pCHSearchBox input::placeholder {
-        color: var(--secondary-color-blue);
-    }
-
-    .pCHSearchBox i {
-        color: var(--secondary-color-blue);
-        font-size: 17px;
-        background: var(--bar-color-light);
-        padding: 0.2rem;
-        margin: 0.2rem;
-        border-radius: 50%;
-    } 
-
-    .pCHSearchBox i:hover {
-        color: var(--bar-color-light);
-        background: var(--secondary-color-blue);
-    } 
-
-    .messageContainer .postChatBody {
-        padding: 0.4rem;
-        overflow: hidden;
-        overflow-y: auto;
-        scrollbar-width: none;
-        transition: all 0.6s ease;
-        pointer-events: auto;
-        display: block;
-        gap: 0.4rem;
-        height: 80%;
-        transition: var(--tran-06);
-        background: var(--bar-color-light);
-    }
-
-    .messageContainer .postChatBody::-webkit-scrollbar {
-        width: 6px;
-    }
-
-    .messageContainer .postChatBody::-webkit-scrollbar-track {
-        background: #f1f1f1;
-    }
-
-    .messageContainer .postChatBody::-webkit-scrollbar-thumb {
-        background: var(--primary-color-light-blue);
-        border-radius: 15px;
-    }
-
-    .messageContainer .postChatBody::-webkit-scrollbar-thumb:hover {
-        background: #bcd4e6;
-    }
-
-    .postChatBody .postCBContainer {
-        display: flex;
-        align-items: center;
-        border-radius: 25px;
-        transition: var(--tran-03);
-        cursor: pointer;
-        padding: 0.3rem 0;
-        margin: 0.3rem 0;
-    }
-
-    .postChatBody .postCBContainer:hover {
-        background: var(--primary-color-light-blue);
-        color: var(--bar-color-light);
-    }
-
-    .postCBContainer .imgCont {
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0 0.5rem;
-        border-radius: 50%;
-    }
-
-    .imgCont img {
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-    }
-
-    .imgCont .onlineIcon {
-        position: absolute;
-        height: 15px;
-	    width: 15px;
-        background: var(--secondary-color-blue);
-        border-radius: 50%;
-        bottom: -0.1rem;
-        right: 0;
-        border: 1px solid var(--bar-color-light);
-    }
-
-    .imgCont .offlineIcon {
-        background: #c23616;
-        position: absolute;
-        height: 15px;
-	    width: 15px;
-        border-radius: 50%;
-        bottom: -0.1rem;
-        right: 0;
-        border: 1px solid var(--bar-color-light);
-    }
-
-    .postCBContainer .userInfo {
-        display: block;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        text-align: start;
-    }
-
-    .userInfo span {
-        font-size: 15px;
-        font-weight: 400;
-    }
-
-    .userInfo p {
-        font-size: 12px;
-        line-height: 15px;
-    }
-
-    @media only screen and (max-width: 1325px) {
-
-        .rightContentPlus {
-            display: none;
+    @media only screen and (max-width: 850px) {
+        .mainPartView {
+            gap: 0.2rem;
         }
-
     }
-    
+
+    @media only screen and (max-width: 650px) {
+        .mainPartView {
+            display: grid;
+            gap: 0.4rem;
+            justify-items: center;
+        }
+    }
 
     .postContainer {
-        max-width: 700px;
-        height: auto;
+        width: 965px;
+        height: 100%;
         transition: var(--tran-06);
         pointer-events: auto;
-        padding: 3.7rem 2px 2rem 2px;
+        padding: 3.7rem 0 2rem 0;
         display: flex;
         flex-wrap: wrap;
+        align-items: flex-start;
         justify-content: center;
         position: relative;
         box-shadow: var(--box-shadow);
@@ -1733,7 +1702,7 @@
     }
 
     .postContainer .wrapper {
-        width: 330px;
+        width: 305px;
         background: var(--bar-color-light);
         padding: 0.2rem 0;
         box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
@@ -1928,83 +1897,59 @@
         font-size: 12px;
     }
 
-    @media only screen and (max-width: 1050px) {
-
+    @media only screen and (max-width: 1180px) {
         .postContainer {
-            max-width: 700px;
-            height: auto;
-            transition: var(--tran-06);
-            pointer-events: auto;
-            padding: 3.7rem 2px 2rem 2px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            position: relative;
-            box-shadow: var(--box-shadow);
-            background: var(--bar-color-light);
-            
+           width: 650px;
+        }
+    }
 
-            min-width: 700px;
-            position: absolute;
-            left: 53.5%;
-            transform: translateX(-46.5%);
+    @media only screen and (max-width: 970px) {
+        .postContainer {
+           width: 330px;
+        }
+
+        .postContainer .wrapper {
+            width: 325px;
         }
 
     }
 
-    @media only screen and (max-width: 840px) {
-
+    @media only screen and (max-width: 850px) {
         .postContainer {
-            min-width: 700px;
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            padding: 3.7rem 0 2rem 0;
-        }
-
-    }
-
-    @media only screen and (max-width: 715px) {
-        .postContainer {
-            min-width: 335px;
-            width: 335px;
-            padding: 3.7rem 2px 4rem 2px;
+            padding: 2.5rem 0 2.4rem 0;
         }
     }
 
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: 650px) {
         .postContainer {
-            max-width: 100%;
-            width: 100%;
-            padding: 2.7rem 0px 4rem 0px;
+           grid-row: 2;
+           grid-column: 1;
+           padding: 0rem 0 2.5rem 0;
+           width: 100%;
+        }
+
+        .postContainer .wrapper {
+            width: 350px;
         }
     }
 
-    @media only screen and (max-width: 415px) {
+    @media only screen and (max-width: 345px) {
         .postContainer .wrapper {
             width: 100%;
         }
-
-        .vimage img {
-            height: 120px;
-        }
-
-        .bodyPostText .postWritten {
-            height: 99px;
-        }
-            
-
-
     }
 
+
+
     #leftContentPlus {
-        width: 300px;
+        width: 305px;
         height: 650px;
         padding: 4rem 2px 2rem 2px; 
-        justify-content: flex-start;
+        justify-content: center;
         display: flex;
         align-items: start;
         position: relative;
+        background: red;
     } 
 
     #leftContentPlus .categoriesBox {
@@ -2014,12 +1959,12 @@
         box-shadow: var(--box-shadow);
         position: fixed;
         display: block;
-        height: 400px;
+        height: 360px;
         overflow: hidden;
         overflow-y: auto;
         scrollbar-width: none;
         padding-bottom: 2rem;  
-        width: 295px; 
+        width: 298px; 
         border-bottom: 1rem solid var(--body-color-grey);
     }
 
@@ -2130,13 +2075,47 @@
         font-size: 12px;
     }
 
-    @media only screen and (max-width: 1050px) {
-
+    @media only screen and (max-width: 970px) {
         #leftContentPlus {
-            display: none;
+            width: 300px;
         } 
 
+        #leftContentPlus .categoriesBox {
+            height: 88%;
+            width: 295px;
+        }
+
     }
+
+    @media only screen and (max-width: 850px) {
+        #leftContentPlus {
+            padding: 2.8rem 2px 2rem 2px; 
+        } 
+    }
+
+    @media only screen and (max-width: 650px) {
+        #leftContentPlus {
+            width: 100%;
+            padding: 2.7rem 2px 0.1rem 2px;
+            justify-content: center;
+            align-items: start;
+            grid-row: 1;
+            grid-column: 1;
+        } 
+
+        #leftContentPlus .categoriesBox {
+            position: relative;
+            width: 350px;
+            height: 100%;
+        }
+    }
+
+    @media only screen and (max-width: 345px) {
+        #leftContentPlus .categoriesBox {
+            width: 100%;
+        }
+    }
+
 
 
     /* ========================================== PROFILE EDIT STARTS ============*/
