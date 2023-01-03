@@ -2,12 +2,6 @@
 
     <div class="mainPartView">
 
-        <div class="rightContentPlus">   
-
-
-
-        </div>
-
         <div class="postContainer">
                 
             <div class="wrapper">
@@ -1156,6 +1150,12 @@
         </div>
 
         <div id="leftContentPlus">
+            <div class="categoryViewer">
+                <a>
+                        <h5>Categories</h5>
+                        <i class="bi bi-chevron-right icon-first"></i>
+                </a>
+            </div>
             
             <ul class="categoriesBox">
 
@@ -2604,6 +2604,28 @@
 
             this.classList.toggle('active');
             item.classList.toggle('show');
+        })
+    })
+
+    const categoriesBox = document.querySelectorAll('#leftContentPlus .categoriesBox');
+    // const leftContentPlus = document.getElementById('leftContentPlus');
+
+    categoriesBox.forEach(item=> {
+        const a = item.parentElement.querySelector('a:first-child');
+        a.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            if(!this.classList.contains('active')) {
+                cateDropDownOpt.forEach(i=> {
+                    const aLink = i.parentElement.querySelector('a:first-child');
+
+                    aLink.classList.remove('active');
+                    i.classList.remove('view');
+                })
+            }
+
+            this.classList.toggle('active');
+            item.classList.toggle('view');
         })
     })
 

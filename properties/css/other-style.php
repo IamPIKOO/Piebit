@@ -1681,7 +1681,7 @@
     @media only screen and (max-width: 650px) {
         .mainPartView {
             display: grid;
-            gap: 0.4rem;
+            gap: 0rem;
             justify-items: center;
         }
     }
@@ -1946,11 +1946,50 @@
         height: 650px;
         padding: 4rem 2px 2rem 2px; 
         justify-content: center;
-        display: flex;
-        align-items: start;
+        display: grid;
         position: relative;
-        background: red;
-    } 
+        background: var(--bar-color-light);
+        justify-items: center;
+    }
+
+    #leftContentPlus .categoryViewer a {
+        background: var(--bar-color-light);
+        display: none;
+        pointer-events: none;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        width: 300px; 
+        height: 30px;
+        padding: 0.8rem 0.8rem;
+        box-shadow: var(--box-shadow);
+        color: var(--text1-color-dark-grey);
+    }
+
+    #leftContentPlus .categoryViewer a h5 {
+        font: 15px;
+        opacity: 7;
+    }
+
+    #leftContentPlus .categoryViewer a .icon-first {
+        font-size: 17px;
+        transition: all .3s ease;
+    }
+
+    #leftContentPlus .categoryViewer > a:hover {
+        background: var(--secondary-color-blue);
+        color: var(--bar-color-light);
+        border: 1px solid var(--primary-color-light-blue);
+    }
+    #leftContentPlus .categoryViewer > a.active .icon-first {
+        transform: rotateZ(90deg);
+    }
+    #leftContentPlus .categoryViewer > a.active,
+    #leftContentPlus .categoryViewer > a.active:hover {
+        background: var(--secondary-color-blue);
+        color: var(--bar-color-light);
+        border: 1px solid var(--primary-color-light-blue);
+    }
 
     #leftContentPlus .categoriesBox {
         background: var(--bar-color-light);
@@ -1960,11 +1999,11 @@
         position: fixed;
         display: block;
         height: 360px;
+        width: 300px; 
         overflow: hidden;
         overflow-y: auto;
         scrollbar-width: none;
-        padding-bottom: 2rem;  
-        width: 298px; 
+        padding-bottom: 2rem;   
         border-bottom: 1rem solid var(--body-color-grey);
     }
 
@@ -2096,21 +2135,38 @@
     @media only screen and (max-width: 650px) {
         #leftContentPlus {
             width: 100%;
-            padding: 2.7rem 2px 0.1rem 2px;
+            padding: 2.9rem 2px 0.1rem 2px;
             justify-content: center;
             align-items: start;
             grid-row: 1;
             grid-column: 1;
+            height: unset;
         } 
+
+        #leftContentPlus .categoryViewer a {
+            display: flex;
+            pointer-events: auto;
+            width: 350px;
+        }
 
         #leftContentPlus .categoriesBox {
             position: relative;
             width: 350px;
             height: 100%;
+            display: none;
+            pointer-events: none;
+        }
+
+        #leftContentPlus .categoriesBox.view {
+            display: block;
+            pointer-events: auto;
         }
     }
 
     @media only screen and (max-width: 345px) {
+        #leftContentPlus .categoryViewer a {
+            width: 100%;
+        }
         #leftContentPlus .categoriesBox {
             width: 100%;
         }
