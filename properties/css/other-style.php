@@ -1925,12 +1925,17 @@
            grid-row: 2;
            grid-column: 1;
            padding: 0rem 0 2.5rem 0;
-           width: 98%;
+           width: 100%;
            scrollbar-width: none;
+           display: block;
+           justify-items: center;
+           justify-content: center;
+           justify-self: center;
+           position: relative;
         }
 
         .postContainer .wrapper {
-            width: 352px;
+            width: 340px;
         }
     }
 
@@ -2136,7 +2141,7 @@
     @media only screen and (max-width: 650px) {
         #leftContentPlus {
             width: 98%;
-            padding: 2.9rem 2px 0.1rem 2px;
+            padding: 2.9rem 0px 0.1rem 0px;
             justify-content: center;
             align-items: start;
             grid-row: 1;
@@ -2148,16 +2153,15 @@
         #leftContentPlus .categoryViewer a {
             display: flex;
             pointer-events: auto;
-            width: 350px;
+            width: 345px;
         }
 
         #leftContentPlus .categoriesBox {
             position: relative;
-            width: 350px;
             height: 100%;
             display: none;
             pointer-events: none;
-            width: 350px;
+            width: 345px;
             scrollbar-width: none;
         }
 
