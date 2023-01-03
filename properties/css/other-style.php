@@ -1926,6 +1926,7 @@
            grid-column: 1;
            padding: 0rem 0 2.5rem 0;
            width: 98%;
+           scrollbar-width: none;
         }
 
         .postContainer .wrapper {
@@ -2141,6 +2142,7 @@
             grid-row: 1;
             grid-column: 1;
             height: unset;
+            scrollbar-width: none;
         } 
 
         #leftContentPlus .categoryViewer a {
@@ -2156,6 +2158,7 @@
             display: none;
             pointer-events: none;
             width: 350px;
+            scrollbar-width: none;
         }
 
         #leftContentPlus .categoriesBox.view {
