@@ -1925,11 +1925,11 @@
            grid-row: 2;
            grid-column: 1;
            padding: 0rem 0 2.5rem 0;
-           width: 100%;
+           width: 98%;
         }
 
         .postContainer .wrapper {
-            width: 350px;
+            width: 352px;
         }
     }
 
@@ -1959,8 +1959,8 @@
         justify-content: space-between;
         align-items: center;
         position: relative;
-        width: 300px; 
-        height: 30px;
+        width: 298px; 
+        height: 38px;
         padding: 0.8rem 0.8rem;
         box-shadow: var(--box-shadow);
         color: var(--text1-color-dark-grey);
@@ -1999,7 +1999,7 @@
         position: fixed;
         display: block;
         height: 360px;
-        width: 300px; 
+        width: 298px;
         overflow: hidden;
         overflow-y: auto;
         scrollbar-width: none;
@@ -2134,7 +2134,7 @@
 
     @media only screen and (max-width: 650px) {
         #leftContentPlus {
-            width: 100%;
+            width: 98%;
             padding: 2.9rem 2px 0.1rem 2px;
             justify-content: center;
             align-items: start;
@@ -2155,6 +2155,7 @@
             height: 100%;
             display: none;
             pointer-events: none;
+            width: 350px;
         }
 
         #leftContentPlus .categoriesBox.view {
