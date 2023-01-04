@@ -2189,7 +2189,7 @@
             width: 100vw;
         }
         #leftContentPlus .categoriesBox {
-            width: 98%;
+            width: 95%;
         }
     }
 
