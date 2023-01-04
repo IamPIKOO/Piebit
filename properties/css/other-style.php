@@ -1924,7 +1924,7 @@
         .postContainer {
            grid-row: 2;
            grid-column: 1;
-           padding: 0rem 0 2.5rem 0;
+           padding: 0rem 0 2.8rem 0;
            width: 100%;
            scrollbar-width: none;
            display: flex;
@@ -1942,11 +1942,10 @@
     @media only screen and (max-width: 400px) {
         .postContainer {
            width: 100vw;
-           display: flex;
         }
 
         .postContainer .wrapper {
-            width: 100%;
+            width: 98%;
         }
 
         .vimage img {
@@ -2175,7 +2174,7 @@
             height: 100%;
             display: none;
             pointer-events: none;
-            width: 100vw;
+            width: 340px;
             scrollbar-width: none;
         }
 
