@@ -1681,7 +1681,7 @@
     @media only screen and (max-width: 650px) {
         .mainPartView {
             display: grid;
-            gap: 0rem;
+            gap: 0;
             justify-items: center;
         }
     }
@@ -1927,22 +1927,36 @@
            padding: 0rem 0 2.5rem 0;
            width: 100%;
            scrollbar-width: none;
-           display: block;
-           justify-items: center;
+           display: flex;
            justify-content: center;
-           justify-self: center;
+           place-content: center;
            position: relative;
+           box-shadow: none;
+           gap: 0;
         }
 
         .postContainer .wrapper {
             width: 340px;
         }
     }
+    @media only screen and (max-width: 400px) {
+        .postContainer {
+           width: 100vw;
+           display: flex;
+        }
 
-    @media only screen and (max-width: 345px) {
         .postContainer .wrapper {
             width: 100%;
         }
+
+        .vimage img {
+            height: 120px;
+        }
+
+        .bodyPostText .postWritten {
+            height: 99px;
+        }
+
     }
 
 
@@ -2140,7 +2154,7 @@
 
     @media only screen and (max-width: 650px) {
         #leftContentPlus {
-            width: 98%;
+            width: 100%;
             padding: 2.9rem 0px 0.1rem 0px;
             justify-content: center;
             align-items: start;
@@ -2153,7 +2167,7 @@
         #leftContentPlus .categoryViewer a {
             display: flex;
             pointer-events: auto;
-            width: 345px;
+            width: 340px;
         }
 
         #leftContentPlus .categoriesBox {
@@ -2161,7 +2175,7 @@
             height: 100%;
             display: none;
             pointer-events: none;
-            width: 345px;
+            width: 100vw;
             scrollbar-width: none;
         }
 
@@ -2171,12 +2185,12 @@
         }
     }
 
-    @media only screen and (max-width: 345px) {
+    @media only screen and (max-width: 400px) {
         #leftContentPlus .categoryViewer a {
-            width: 100%;
+            width: 100vw;
         }
         #leftContentPlus .categoriesBox {
-            width: 100%;
+            width: 100vw;
         }
     }
 
